@@ -7,7 +7,7 @@ import { getEntries } from 'astro:content';
 export async function getStaticPaths() {
   const projectsEntries = await getCollection('projects');
   return projectsEntries
-    .filter((entry) => entry.data.lang === "it")
+    .filter((entry) => entry.data.lang === 'en')
     .map((entry) => ({
       params: { slug: entry.slug },
       props: { entry }
