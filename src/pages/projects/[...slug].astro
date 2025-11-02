@@ -22,7 +22,7 @@ const relatedPosts = await getEntries(entry.data.principlesPosts);
 
 <Layout title={`DSI - ${entry.data.title}`} locale={entry.data.lang} description={entry.data.subtitle} img={entry.data.cover?.src}>
   <div class="bg-blu px-3 py-2 text-4xl text-white">{entry.data.lang === "it" ? "Progetto" : "Project"}</div>
-  <h1 class="p-3 my-4 text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-5xl text-blu font-light">{entry.data.title}</h1>
+  <h1 class="p-3 my-4 uppercase text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-5xl text-blu font-light">{entry.data.title}</h1>
 
   {entry.data.cover && (
     <Image
@@ -59,7 +59,7 @@ const relatedPosts = await getEntries(entry.data.principlesPosts);
       </div>
     )}
     <div class="pr-3">
-      <span class="block font-NM-Book">Principi</span>
+      <span class="block font-NM-Book">{entry.lang === "it" ? "Principi" : "Principles"}</span>
       <div class="flex flex-wrap whitespace-normal gap-x-2 ">
         {relatedPosts.map(
           (post) =>
@@ -77,7 +77,7 @@ const relatedPosts = await getEntries(entry.data.principlesPosts);
       </div>
     </div>
     <div class="pr-3">
-      <span class="block font-NM-Book">Tipologia</span>{entry.data.type}
+      <span class="block font-NM-Book">{entry.lang === "it" ? "Tiplogia" : "Type"}</span>{entry.data.type}
     </div>
   </div>
 </Layout>
